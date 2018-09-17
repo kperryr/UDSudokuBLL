@@ -67,5 +67,14 @@ public class LatinSquareTest {
 		LatinSquare ls= new LatinSquare(mySquare);
 		assertTrue(ls.ContainsZero());
 	}
+
+@Test
+public void hasAllValuesTest1()
+{
+	int[] arr1= {5,6,4,1,3,2};
+	int[] arr2= {1,2,3,4,5};
+	LatinSquare ls= new LatinSquare();
+	assertTrue(ls.hasAllValues(arr1,arr2));
+}
 }
 

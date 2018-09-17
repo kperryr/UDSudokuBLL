@@ -80,6 +80,10 @@ public class LatinSquare {
 	public boolean hasAllValues( int[] arr1, int[] arr2)
 	{
 		int totalEle=0;
+		if (arr1 == null)
+			return false;
+		if (arr2 == null)
+			return false;
 		
 		for (int i= 0; i< arr1.length; i++)
 		{
@@ -89,15 +93,13 @@ public class LatinSquare {
 				{
 					totalEle+=1;
 					
-					if (totalEle == arr1.length)
-					{
-						return true;
-					}
-						
 					}
 				}
 			}
-		
+		if (totalEle == arr2.length)
+		{
+			return true;
+		}
 		return false;
 		}
 	
