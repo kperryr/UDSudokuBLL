@@ -102,7 +102,42 @@ public class LatinSquare {
 		}
 		return false;
 		}
-	
+	public int [] getColum(int iCol){
+		int[] iColum = new int[this.LatinSquare.length];
+		for(int i = 0; i<this.LatinSquare.length; i++){
+			iColum[i]=LatinSquare[i][iCol];
+		}
+		return iColum;
 	}
+
+
+	public int[] getRow(int iRow){
+		int[] irow = new int[this.LatinSquare.length];
+		for(int i = 0; i<this.LatinSquare.length; i++){
+			irow[i]=LatinSquare[iRow][i];
+		}
+		return irow;
+
+	}
+
+	public boolean isLatinSquare() {
+
+		int n = getRow().length;
+
+		for (int i = 1; i <= n; i++) {
+
+			int[] x = getRow(i);
+			int[] y = getColum(i);
+
+			if (hasAllValues(x, y) == true) {
+
+				return true; 
+
+			}
+		return false;
+
+	}
+	}
+}
 
 
